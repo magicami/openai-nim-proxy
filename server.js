@@ -21,8 +21,10 @@ const SHOW_REASONING = false; // Set to true to show reasoning with <think> tags
 const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwargs thinking parameter
 
 // Model mapping (adjust based on available NIM models)
+//stepfun-ai/step-3.5-flash
+//bytedance/seed-oss-36b-instruct
 const MODEL_MAPPING = {
-  'gpt-3.5-turbo': 'bytedance/seed-oss-36b-instruct',
+  'gpt-3.5-turbo': 'stepfun-ai/step-3.5-flash',
   'gpt-4': 'qwen/qwen3-coder-480b-a35b-instruct',
   'gpt-4-turbo': 'moonshotai/kimi-k2-instruct-0905',
   'gpt-4o': 'deepseek-ai/deepseek-v3.1',
@@ -86,7 +88,7 @@ app.post('/v1/chat/completions', async (req, res) => {
         } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
           nimModel = 'meta/llama-3.1-70b-instruct';
         } else {
-          nimModel = 'bytedance/seed-oss-36b-instruct';
+          nimModel = 'stepfun-ai/step-3.5-flash';
         }
       }
     }

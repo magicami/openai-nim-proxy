@@ -23,9 +23,8 @@ const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwarg
 // Model mapping (adjust based on available NIM models)
 //deepseek-ai/deepseek-v4-pro
 //deepseek-ai/deepseek-v4-flash
-//minimaxai/minimax-m3
 const MODEL_MAPPING = {
-  'gpt-3.5-turbo': 'minimaxai/minimax-m3',
+  'gpt-3.5-turbo': 'deepseek-ai/deepseek-v4-flash',
   'gpt-4': 'qwen/qwen3-coder-480b-a35b-instruct',
   'gpt-4-turbo': 'moonshotai/kimi-k2-instruct-0905',
   'gpt-4o': 'deepseek-ai/deepseek-v3.1',
@@ -89,7 +88,7 @@ app.post('/v1/chat/completions', async (req, res) => {
         } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
           nimModel = 'meta/llama-3.1-70b-instruct';
         } else {
-          nimModel = 'minimaxai/minimax-m3';
+          nimModel = 'deepseek-ai/deepseek-v4-flash';
         }
       }
     }

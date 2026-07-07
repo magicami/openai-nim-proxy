@@ -24,7 +24,7 @@ const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwarg
 //deepseek-ai/deepseek-v4-pro
 //deepseek-ai/deepseek-v4-flash
 //nvidia/nemotron-3-super-120b-a12b //very good, doesn't work for non con
-//nvidia/nemotron-3-ultra-550b-a55b
+//nvidia/nemotron-3-ultra-550b-a55b //also good but slow. Very good for new characters in touhou futa
 const MODEL_MAPPING = {
   'gpt-3.5-turbo': 'nvidia/nemotron-3-super-120b-a12b',
   'gpt-4': 'qwen/qwen3-coder-480b-a35b-instruct',

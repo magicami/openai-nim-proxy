@@ -25,9 +25,9 @@ const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwarg
 //deepseek-ai/deepseek-v4-flash-0731
 //nvidia/nemotron-3-super-120b-a12b //very good, doesn't work for non con
 //nvidia/nemotron-3-ultra-550b-a55b //also good but slow. Very good for new characters in touhou futa
-//z-ai/glm-5.3
+//z-ai/glm-5.3-flash
 const MODEL_MAPPING = {
-  'gpt-3.5-turbo': 'z-ai/glm-5.3',
+  'gpt-3.5-turbo': 'z-ai/glm-5.3-flash',
   'gpt-4': 'qwen/qwen3-coder-480b-a35b-instruct',
   'gpt-4-turbo': 'moonshotai/kimi-k2-instruct-0905',
   'gpt-4o': 'deepseek-ai/deepseek-v3.1',
@@ -91,7 +91,7 @@ app.post('/v1/chat/completions', async (req, res) => {
         } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
           nimModel = 'meta/llama-3.1-70b-instruct';
         } else {
-          nimModel = 'z-ai/glm-5.3';
+          nimModel = 'z-ai/glm-5.3-flash';
         }
       }
     }
